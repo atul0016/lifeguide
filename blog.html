@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.rtl.min.css"
+      integrity="sha384-DOXMLfHhQkvFFp+rWTZwVlPVqdIhpDVYT9csOnHSgWQWPX0v5MCGtjCJbY6ERspU"
+      crossorigin="anonymous"
+    />
+    <style>
+      .nametop {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+      .navbar {
+        position: fixed;
+        width: 100%;
+        top: 0px;
+        z-index: 1;
+      }
+      .bd4 {
+        display: flex;
+        background-color: rgb(220, 220, 220);
+        padding: 10vh 0px;
+      }
+      .bd44 {
+        display: flex;
+        flex-direction: column;
+        margin: 0px 12vw;
+        padding-top: 4vh;
+        padding-left: 4vw;
+      }
+      .bd45 {
+        width: 40vw;
+        padding-left: 11vw;
+      }
+      .bd45 button {
+        margin-left: 19vw;
+        padding: 0.3vh 2.7vw;
+        background-color: black;
+        color: white;
+        font-weight: lighter;
+        font-size: larger;
+      }
+      .bd45 button:hover {
+        background-color: white;
+        color: black;
+        border: 2px solid black;
+        animation: b1 0.2s ease-in;
+      }
+      @keyframes b1 {
+        0% {
+          background-color: black;
+          color: white;
+        }
+        100% {
+          background-color: white;
+          color: black;
+        }
+      }
+      #bottomline {
+        text-align: center;
+        padding: 1vh 0px;
+        background-color: rgb(175, 175, 175);
+      }
+      .nav-item img {
+        height: 6vh;
+        width: 3vw;
+      }
+      .menu li {
+        list-style: none;
+        width: 15vw;
+        height: 5vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(240, 240, 240);
+        cursor: pointer;
+        font-size: 2.5vh;
+      }
+      .menu {
+        position: absolute;
+        right: 2vw;
+        width: 20vw;
+        z-index: 2;
+        top: 12vh;
+        display: none;
+      }
+      .menu a {
+        color: black;
+        text-decoration: none;
+      }
+      .menu li:hover {
+        border: 2px solid white;
+        background-color: white;
+      }
+      #msgbut {
+        text-align: right;
+        margin-top: 2vh;
+        font-style: italic;
+        visibility: hidden;
+      }
+      .bd3{
+        margin-top: 6.2rem;
+        display: flex;
+        flex-direction: column;
+        background-image: url(/ivana-cajina-HDd-NQ_AMNQ-unsplash.jpg);
+        background-size:contain;
+        background-repeat: no-repeat;background-position: top; 
+        margin-bottom: 2rem;
+      }
+      .bd3 h1{
+        text-align: center;
+        font-size: 3.2rem;
+        font-weight: 700;
+        margin-top: 4rem;
+      }
+      .bd33 {
+        
+        flex-wrap: wrap;
+        padding: 0rem 10rem;
+        display: flex;
+        justify-content: space-evenly;
+             }
+      .card {
+        margin: 3rem 0.2rem;
+      }
+      #divv{
+        background-color: gray;
+        position: absolute;
+        z-index: 8;
+        top: 0px;
+        background-color: gray;
+        opacity: 0.5;
+        height: 266vh;
+        width: 100%;
+        display:none;
+      }
+      #models1,#models2,#models3,#models4,#models5,#models6{
+        
+        position: fixed;
+        top: 0.1rem ;
+        left:28%;
+        z-index: 10;  
+        
+        display: none;  
+
+      }
+      .card span{
+        position: relative;
+        bottom: 20rem;
+        left: 40.5rem;
+      }
+      a{text-decoration: none;
+    color: black;}
+    </style>
+  </head>
+  <body>
+    <div id="divv"></div>
+    <nav
+      class="navbar navbar-expand-lg"
+      style="background-color: rgb(240, 240, 240)"
+    >
+      <div class="container-fluid" style="padding: 0.5vh 0px">
+        <div class="nametop">
+          <a
+            class="navbar-brand"
+            style="margin-left: 10vw"
+            href="/index.html"
+            ><strong> CHARLIE XAVIER</strong></a
+          >
+          <a
+            class="navbar-brand"
+            style="margin-left: 10vw"
+            href="/index.html"
+            >A Life Guide</a
+          >
+        </div>
+
+        <div
+          class="collapse navbar-collapse"
+          id="navbarSupportedContent"
+          style="margin-right: 10vw"
+        >
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"
+                ><img id="menubar" onclick="menuclick()" src="/menu.png" alt=""
+              /></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="menu" id="menu">
+      <ul>
+        <li><a href="/contains_all.html">Home</a></li>
+        <li><a href="/Service.html">Service</a></li>
+        <li><a href="/Plans.html">Plans</a></li>
+        <li><a href="/blog.html">Blog</a></li>
+   
+        <li><a href="">Contact</a></li>
+      </ul>
+    </div>
+    <div class="bd3"><h1>THOUGHTS &
+        NOTES</h1>
+    <div class="bd33">
+        
+      <div class="card" style="width: 18rem">
+        <img src="/relaxation.webp" class="card-img-top" alt="..."/>
+        <div class="card-body">
+          <h5 class="card-title">Tips for Relaxation</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+            </p>
+          <button id="r1" onclick="pss()" class="btn btn-primary">Read More</button>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem">
+        <img src="/action.webp" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Taking action creates success</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <button id="r2" onclick="pss1()" class="btn btn-primary">Read More</button>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem">
+        <img src="/timetochange.webp" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Time for a chanage</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <button id="r3" onclick="pss2()" class="btn btn-primary">Read More</button>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem">
+        <img src="adventure.webp" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Getting a grasp of adventure</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <button id="r4" onclick="pss3()" class="btn btn-primary">Read More</button>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem">
+        <img src="happiness.webp" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">5 secrets to find happiness</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <button id="r5" onclick="pss4()" class="btn btn-primary">Read More</button>
+        </div>
+      </div>
+      <div class="card" style="width: 18rem">
+        <img src="lighttolife.webp" class="card-img-top" alt="..." />
+        <div class="card-body">
+          <h5 class="card-title">Bring light into your life</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <button id="r6" onclick="pss5()" class="btn btn-primary">Read More</button>
+        </div>
+      </div>
+    </div></div>
+    <div class="bd4">
+      <div class="bd44">
+        <h6><strong>CONTACT US</strong></h6>
+        <p>NIAMT (Formarly NIFFT)</p>
+        <p>HATIA, Ranchi - 834003</p>
+        <br />
+        <p>Tel: +91 8789*****7</p>
+        <p>Fax: 356-565-58</p>
+        <p>info@mysite.com</p>
+      </div>
+      <div class="bd45">
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label"
+            >Your Name</label
+          >
+          <textarea
+            class="form-control"
+            style="background-color: rgb(220, 220, 220); border-color: black"
+            id="exampleFormControlTextarea1"
+            rows="1"
+          ></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label"
+            >Your Email</label
+          >
+          <input
+            type="email"
+            class="form-control"
+            style="background-color: rgb(220, 220, 220); border-color: black"
+            id="exampleFormControlInput1"
+            placeholder="name@example.com"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label"
+            >Subject</label
+          >
+          <textarea
+            class="form-control"
+            style="background-color: rgb(220, 220, 220); border-color: black"
+            id="exampleFormControlTextarea1"
+            rows="1"
+          ></textarea>
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label"
+            >Message</label
+          >
+          <textarea
+            class="form-control"
+            style="background-color: rgb(220, 220, 220); border-color: black"
+            id="exampleFormControlTextarea1"
+            rows="3"
+          ></textarea>
+        </div>
+        <div>
+          <button id="btnfrm" onclick="msgsub()">Submit</button>
+          <p id="msgbut">Thanks!Your form has been submitted sucessfully.</p>
+        </div>
+      </div>
+    </div>
+    <div id="bottomline">
+      @ 2023 Copyright Disclaimer under Section 107 of the copyright act 1976,
+      allowance is made for fair use for purposes such as criticism, comment,
+      news reporting, scholarship, and research.
+    </div>
+    
+  
+  <div id="models1">
+    <div class="card" style="width:42rem">
+        <img src="/relaxation.webp" class="card-img-top" alt="..." style="height: 20rem;padding: 1rem 2rem; border-bottom: 2px solid gray;" />
+        <span id="crss" onclick="psss()"><a href=""></href>&#x2715</a></span>
+        <div class="card-body">
+          <h5 class="card-title">Taking action creates success</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+          <h3>Create Relevant Content</h3>
+          <p>Writing a blog is a great way to position yourself as an authority in your field and captivate your readers’ attention. Do you want to improve your site’s SEO ranking? Consider topics that focus on relevant keywords and relate back to your website or business. You can also add hashtags (#vacation #dream #summer) throughout your posts to reach more people, and help visitors search for relevant content.</p>
+        </div>
+  </div></div>
+  <div id="models2">
+    <div class="card" style="width:42rem">
+        <img src="/action.webp" class="card-img-top" alt="..." style="height: 20rem;padding: 1rem 2rem; border-bottom: 2px solid gray;" />
+        <span id="crss" onclick="psss()"><a href=""></href>&#x2715</a></span>
+        <div class="card-body">
+          <h5 class="card-title">Why taking action creates success</h5>
+          <p class="card-text">
+            “Do you have a design in mind for your blog? Whether you prefer a trendy postcard look or you’re going for a more editorial style blog - there’s a stunning layout for everyone.”
+          </p>
+          <h3>Create Relevant Content</h3>
+          <p>Writing a blog is a great way to position yourself as an authority in your field and captivate your readers’ attention. Do you want to improve your site’s SEO ranking? Consider topics that focus on relevant keywords and relate back to your website or business. You can also add hashtags (#vacation #dream #summer) throughout your posts to reach more people, and help visitors search for relevant content.</p>
+        </div>
+  </div></div>
+  <div id="models3">
+    <div class="card" style="width:42rem">
+        <img src="/timetochange.webp" class="card-img-top" alt="..." style="height: 20rem;padding: 1rem 2rem; border-bottom: 2px solid gray;" />
+        <span id="crss" onclick="psss()"><a href=""></href>&#x2715</a></span>
+        <div class="card-body">
+          <h5 class="card-title">Time for a change</h5>
+          <p class="card-text">
+            “Do you have a design in mind for your blog? Whether you prefer a trendy postcard look or you’re going for a more editorial style blog - there’s a stunning layout for everyone.”
+          </p>
+          <h3>Create Relevant Content</h3>
+          <p>Writing a blog is a great way to position yourself as an authority in your field and captivate your readers’ attention. Do you want to improve your site’s SEO ranking? Consider topics that focus on relevant keywords and relate back to your website or business. You can also add hashtags (#vacation #dream #summer) throughout your posts to reach more people, and help visitors search for relevant content.</p>
+        </div>
+  </div></div>
+  <div id="models4">
+    <div class="card" style="width:42rem">
+        <img src="/adventure.webp" class="card-img-top" alt="..." style="height: 20rem;padding: 1rem 2rem; border-bottom: 2px solid gray;" />
+        <span id="crss" onclick="psss()"><a href=""></href>&#x2715</a></span>
+        <div class="card-body">
+          <h5 class="card-title">Getting a grasp on adventure</h5>
+          <p class="card-text">
+            “Do you have a design in mind for your blog? Whether you prefer a trendy postcard look or you’re going for a more editorial style blog - there’s a stunning layout for everyone.”
+          </p>
+          <h3>Create Relevant Content</h3>
+          <p>Writing a blog is a great way to position yourself as an authority in your field and captivate your readers’ attention. Do you want to improve your site’s SEO ranking? Consider topics that focus on relevant keywords and relate back to your website or business. You can also add hashtags (#vacation #dream #summer) throughout your posts to reach more people, and help visitors search for relevant content.</p>
+        </div>
+  </div></div>
+  <div id="models5">
+    <div class="card" style="width:42rem">
+        <img src="/happiness.webp" class="card-img-top" alt="..." style="height: 20rem;padding: 1rem 2rem; border-bottom: 2px solid gray;" />
+        <span id="crss" onclick="psss()"><a href=""></href>&#x2715</a></span>
+        <div class="card-body">
+          <h5 class="card-title">5 secrets to finding happiness</h5>
+          <p class="card-text">
+            “Do you have a design in mind for your blog? Whether you prefer a trendy postcard look or you’re going for a more editorial style blog - there’s a stunning layout for everyone.”
+          </p>
+          <h3>Create Relevant Content</h3>
+          <p>Writing a blog is a great way to position yourself as an authority in your field and captivate your readers’ attention. Do you want to improve your site’s SEO ranking? Consider topics that focus on relevant keywords and relate back to your website or business. You can also add hashtags (#vacation #dream #summer) throughout your posts to reach more people, and help visitors search for relevant content.</p>
+        </div>
+  </div></div>
+  <div id="models6">
+    <div class="card" style="width:42rem">
+        <img src="/lighttolife.webp" class="card-img-top" alt="..." style="height: 20rem;padding: 1rem 2rem; border-bottom: 2px solid gray;" />
+        <span id="crss" onclick="psss()"><a href=""></href>&#x2715</a></span>
+        <div class="card-body">
+          <h5 class="card-title">Bring light into your life</h5>
+          <p class="card-text">
+            “Do you have a design in mind for your blog? Whether you prefer a trendy postcard look or you’re going for a more editorial style blog - there’s a stunning layout for everyone.”
+          </p>
+          <h3>Create Relevant Content</h3>
+          <p>Writing a blog is a great way to position yourself as an authority in your field and captivate your readers’ attention. Do you want to improve your site’s SEO ranking? Consider topics that focus on relevant keywords and relate back to your website or business. You can also add hashtags (#vacation #dream #summer) throughout your posts to reach more people, and help visitors search for relevant content.</p>
+        </div>
+  </div></div>
+    <script>
+      function menuclick() {
+        let menu = document.getElementById("menu");
+        let menubar = document.getElementById("menubar");
+        if (menu.style.display === "none") {
+          menu.style.display = "block";
+        } else {
+          menu.style.display = "none";
+        }
+      }
+      function msgsub() {
+        let btnfrm = document.getElementById("btnfrm");
+        let msgbut = document.getElementById("msgbut");
+        msgbut.style.visibility = "visible";
+      }
+      function pss(){
+        let divv = document.getElementById("divv");
+        let models1 = document.getElementById("models1");
+        let r1 = document.getElementById("r1");
+        
+        divv.style.display='block';
+        console.log("clicked on this");
+        models1.style.display='block';
+      }
+      function pss1(){
+        let divv = document.getElementById("divv");
+        let models2 = document.getElementById("models2");
+        let r2 = document.getElementById("r2");
+        
+        divv.style.display='block';
+        console.log("clicked on this");
+        models2.style.display='block';
+      }
+      function pss2(){
+        let divv = document.getElementById("divv");
+        let models3 = document.getElementById("models3");
+        let r3 = document.getElementById("r1");
+        
+        divv.style.display='block';
+        console.log("clicked on this");
+        models3.style.display='block';
+      }
+      function pss3(){
+        let divv = document.getElementById("divv");
+        let models4 = document.getElementById("models4");
+        let r4 = document.getElementById("r4");
+        
+        divv.style.display='block';
+        console.log("clicked on this");
+        models4.style.display='block';
+      }
+      function pss4(){
+        let divv = document.getElementById("divv");
+        let models5 = document.getElementById("models5");
+        let r5 = document.getElementById("r5");
+        
+        divv.style.display='block';
+        console.log("clicked on this");
+        models5.style.display='block';
+      }
+      function pss5(){
+        let divv = document.getElementById("divv");
+        let models6 = document.getElementById("models6");
+        let r6 = document.getElementById("r6");
+        
+        divv.style.display='block';
+        console.log("clicked on this");
+        models6.style.display='block';
+      }
+      function psss(){
+        let divv = document.getElementById("divv");
+        let models1 = document.getElementById("models1");
+        let models2 = document.getElementById("models2");
+        let models3 = document.getElementById("models3");
+        let models4 = document.getElementById("models4");
+        let models5 = document.getElementById("models5");
+        let models6 = document.getElementById("models6");
+        let crss = document.getElementById("crss");
+        
+        divv.style.display='none';
+        console.log("clicked on this");
+        models1.style.display='none';
+        models2.style.display='none';
+        models3.style.display='none';
+        models4.style.display='none';
+        models5.style.display='none';
+        models6.style.display='none';
+      }
+      
+
+      src =
+        "https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js";
+      integrity =
+        "sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4";
+      crossorigin = "anonymous";
+    </script>
+  </body>
+</html>
